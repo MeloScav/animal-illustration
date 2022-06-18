@@ -1,0 +1,215 @@
+:root {
+    --illustration-duration: 10s;
+    --illustrations-count: 3;
+}
+
+html,
+body,
+.illustration {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    -webkit-animation-name: background-animation;
+    animation-name: background-animation;
+    -webkit-animation-duration: calc(var(--illustration-duration) * var(--illustrations-count));
+    animation-duration: calc(var(--illustration-duration) * var(--illustrations-count));
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.illustration {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all linear 0.35s;
+    -o-transition: all linear 0.35s;
+    transition: all linear 0.35s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.illustration.animate {
+    opacity: 1;
+    visibility: visible;
+}
+
+.illustration svg {
+    width: 100%;
+    height: auto;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.illustration path {
+    -webkit-animation-duration: var(--illustration-duration);
+    animation-duration: var(--illustration-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.illustration-dog path {
+    stroke-dasharray: 2437 2439;
+    stroke-dashoffset: 2438;
+}
+
+.illustration-dog.animate path {
+    -webkit-animation-name: illustration-draw-dog;
+    animation-name: illustration-draw-dog;
+}
+
+.illustration-butterfly path {
+    stroke-dasharray: 2385 2387;
+    stroke-dashoffset: 2386;
+}
+
+.illustration-butterfly.animate path {
+    -webkit-animation-name: illustration-draw-butterfly;
+    animation-name: illustration-draw-butterfly;
+}
+
+.illustration-cat path {
+    stroke-dasharray: 3021 3023;
+    stroke-dashoffset: 3022;
+}
+
+.illustration-cat.animate path {
+    -webkit-animation-name: illustration-draw-cat;
+    animation-name: illustration-draw-cat;
+}
+
+@-webkit-keyframes background-animation {
+
+    0%,
+    32%,
+    100% {
+        background-color: #552516;
+    }
+
+    33%,
+    65% {
+        background-color: #74165F;
+    }
+
+    66%,
+    99% {
+        background-color: #334867;
+    }
+}
+
+@keyframes background-animation {
+
+    0%,
+    32%,
+    100% {
+        background-color: #552516;
+    }
+
+    33%,
+    65% {
+        background-color: #74165F;
+    }
+
+    66%,
+    99% {
+        background-color: #334867;
+    }
+}
+
+@-webkit-keyframes illustration-draw-dog {
+
+    0%,
+    100% {
+
+        stroke-dashoffset: 2438;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes illustration-draw-dog {
+
+    0%,
+    100% {
+
+        stroke-dashoffset: 2438;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes illustration-draw-butterfly {
+
+    0%,
+    100% {
+        stroke-dashoffset: 2386;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes illustration-draw-butterfly {
+
+    0%,
+    100% {
+        stroke-dashoffset: 2386;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes illustration-draw-cat {
+
+    0%,
+    100% {
+        stroke-dashoffset: 3022;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes illustration-draw-cat {
+
+    0%,
+    100% {
+        stroke-dashoffset: 3022;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
