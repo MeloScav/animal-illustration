@@ -25,6 +25,24 @@ body {
     animation-iteration-count: infinite;
 }
 
+.introduction-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 16px;
+    color: #fff;
+}
+
+.title {
+    margin: 0 0 16px 0;
+    font-size: 24px;
+}
+
+.text {
+    margin: 0;
+    font-size: 16px;
+}
+
 .illustration {
     position: absolute;
     left: 0;
